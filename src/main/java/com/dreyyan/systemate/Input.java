@@ -21,7 +21,7 @@ public class Input {
                 scanner.nextLine();
                 return input;
             } catch (InputMismatchException e) {
-                Utility.errorMessage("Invalid input, please enter a valid number", 3); 
+                Utility.errorMessage("Invalid input, please enter a valid number", 3);
             } 
         }
     }
@@ -36,7 +36,7 @@ public class Input {
                 scanner.nextLine();
                 return input;
             } catch (InputMismatchException e) {
-                Utility.errorMessage("Invalid input, please enter a valid decimal number", 3); 
+                Utility.errorMessage("Invalid input, please enter a valid decimal number", 3);
             } 
         }
     }
@@ -51,7 +51,7 @@ public class Input {
                 scanner.nextLine();
                 return input;
             } catch (InputMismatchException e) {
-                Utility.errorMessage("Invalid input, please enter a valid decimal number", 3); 
+                Utility.errorMessage("Invalid input, please enter a valid decimal number", 3);
             } 
         }
     }
@@ -65,7 +65,7 @@ public class Input {
                 char input = scanner.nextLine().charAt(0);
                 return input;
             } catch (InputMismatchException e) {
-                Utility.errorMessage("Invalid input, please enter a valid string", 3); 
+                Utility.errorMessage("Invalid input, please enter a valid string", 3);
             } 
         }
     }
@@ -79,7 +79,7 @@ public class Input {
                 String input = scanner.nextLine();
                 return input;
             } catch (InputMismatchException e) {
-                Utility.errorMessage("Invalid input, please enter a valid string", 3); 
+                Utility.errorMessage("Invalid input, please enter a valid string", 3);
             } 
         }
     }
@@ -93,7 +93,7 @@ public class Input {
                 boolean input = scanner.nextBoolean();
                 return input;
             } catch (InputMismatchException e) {
-                Utility.errorMessage("Invalid input, please enter a valid boolean", 3); 
+                Utility.errorMessage("Invalid input, please enter a valid boolean", 3);
             } 
         }
     }
