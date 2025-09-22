@@ -1,1 +1,4 @@
 COMMANDS.md
+.vscode
+.idea/
+*.iml
