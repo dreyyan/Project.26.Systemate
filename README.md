@@ -1,38 +1,51 @@
-# Systemate - Java Library for Easy Console Development
+# Systemate
+_Java Library for Easy Console Development_
 
-## Project Overview
+**Systemate** is a lightweight, open-source Java library designed to simplify console-based application development. It provides utility functions for robust input validation, formatted console output, and interactive prompts, reducing boilerplate code for developers. With a focus on ease of use and cross-platform compatibility, Systemate streamlines the creation of user-friendly command-line applications.
 
-Systemate is a lightweight, open-source Java library designed to simplify console-based application development. It provides a set of utility functions to handle user input and console output, making it easier to create robust and interactive command-line applications. The library focuses on streamlined input validation, formatted output, and console manipulation, reducing boilerplate code for developers.
+The primary purpose of Systemate is to empower developers to build efficient, interactive console applications with minimal setup, making it ideal for educational projects, prototypes, or small-scale tools.
 
-### Key Features:
-- Robust input handling for various data types (int, float, double, char, string, boolean)
-- Utility functions for console formatting, error handling, and animation
-- Simple console clearing and user interaction prompts
-- Cross-platform compatibility
-- Easy-to-use API for rapid development
+## FEATURES
+✅ **Robust Input Handling** – Validate and retrieve inputs for various data types (int, float, double, char, string, boolean).  
+✅ **Console Formatting** – Format output with symbols, animations, and error messages.  
+✅ **Interactive Prompts** – Simplify user interactions with clear screen and press-to-continue utilities.  
+✅ **Cross-Platform** – Compatible with Windows, Linux, and macOS using standard Java libraries.  
+✅ **No Dependencies** – Built entirely with standard Java, ensuring easy integration.  
 
-### Project Details
-- **Version**: 1.0.0
-- **Author**: Dreyyan (ADT07299270@gmail.com)
-- **Repository**: [https://github.com/dreyyan/Project.26.Systemate](https://github.com/dreyyan/Project.26.Systemate)
-- **License**: MIT License
-- **Last Updated**: September 2025
-- **Java Version**: JDK 8 or higher
-- **Dependencies**: None (uses standard Java libraries)
+## FUTURE IMPLEMENTATIONS
+🚀 **Extended Input Validation** – Add support for custom regex patterns and complex data types.  
+🚀 **Advanced Formatting** – Introduce color support and ASCII art for enhanced console visuals.  
+🚀 **Configuration Management** – Support for external configuration files to customize behavior.  
+🚀 **Testing Utilities** – Add built-in tools for debugging and testing console apps.  
 
-## Getting Started
+## UPDATES
+🔄 Initial release (v1.0.0) with core input and utility functions.  
+🔄 Optimized performance for console animations and input validation.  
+🔄 Improved documentation for easier adoption.  
 
+## PROJECT DETAILS
+📌 **Author:** dreyyan  
+📌 **Started:** 2025-09-21  
+📌 **Finished:** 2025-09-22  
+
+## TECH STACK
+🛠️ **Language:** Java  
+🛠️ **Libraries:** Standard Java libraries (no external dependencies)  
+
+## INSTALLATION
 ### Prerequisites
 - Java Development Kit (JDK) 8 or higher
-- A Java project with a build tool (Maven, Gradle, or manual JAR inclusion)
+- A build tool (Maven, Gradle, or manual JAR inclusion)
+- Create a development environment:
+  ```
+  java -version
+  ```
 
-### Installation
-
-You can include Systemate in your project either by downloading the JAR file or using Maven.
+### Install Dependencies
+Systemate uses only standard Java libraries, so no external dependencies are required.
 
 #### Option 1: Maven
-Add the following repository and dependency to your `pom.xml`:
-
+Add the following to your `pom.xml`:
 ```xml
 <repositories>
     <repository>
@@ -47,51 +60,49 @@ Add the following repository and dependency to your `pom.xml`:
 </dependency>
 ```
 
-*Note*: Replace `1.0.0` with the desired version or a specific Git tag/commit hash if needed.
-
 #### Option 2: Manual JAR Inclusion
-1. Download the latest `systemate.jar` from the [releases page](https://github.com/dreyyan/Project.26.Systemate/releases).
+1. Download `systemate.jar` from the [releases page](https://github.com/dreyyan/Project.26.Systemate/releases).
 2. Add the JAR to your project's classpath.
-3. For IDEs, include the JAR in your project dependencies (e.g., in Eclipse, add it to the build path).
+3. For IDEs, include the JAR in project dependencies (e.g., Eclipse build path).
 
 #### Option 3: Building from Source
 1. Clone the repository:
-   ```bash
+   ```
    git clone https://github.com/dreyyan/Project.26.Systemate.git
    ```
 2. Navigate to the project directory:
-   ```bash
+   ```
    cd Project.26.Systemate
    ```
-3. Build the project using Maven:
-   ```bash
+3. Build with Maven:
+   ```
    mvn clean install
    ```
-4. The compiled JAR will be available in the `target/` directory.
+4. Find the compiled JAR in the `target/` directory.
 
-## Usage
+### Verify Installation
+Check Java version:
+```
+java -version
+```
 
-To use Systemate, import the `com.dreyyan.systemate` package and utilize the `Input` and `Utility` classes. Below is an example demonstrating some of the library's functionality:
-
+## USAGE
+### Running an Application with Systemate
+Import the `com.dreyyan.systemate` package and use the `Input` and `Utility` classes. Example:
 ```java
 import com.dreyyan.systemate.Input;
 import com.dreyyan.systemate.Utility;
 
 public class Main {
     public static void main(String[] args) {
-        // Display a formatted header
         Utility.displayFormat('=', 30);
         Utility.animatedPrint("Welcome to Systemate!\n", 50);
         Utility.displayFormat('=', 30);
 
-        // Get validated user input
         String name = Input.getString("Enter your name: ");
         int age = Input.getInt("Enter your age: ");
 
-        // Clear the console
         Utility.clearScreen();
-
-        // Display output and wait for user
         Utility.animatedPrint("Hello, " + name + "! You are " + age + " years old.\n", 30);
         Utility.pressToContinue();
     }
@@ -99,7 +110,6 @@ public class Main {
 ```
 
 ### Available Functions
-
 Systemate provides two main classes: `Input` and `Utility`. Below is a list of their functions.
 
 #### `Input` Class
@@ -136,13 +146,11 @@ public class MenuExample {
         Utility.displayFormat('-', 20);
         Utility.animatedPrint("Main Menu\n", 50);
         Utility.displayFormat('-', 20);
-
         while (true) {
             System.out.println("1. Say Hello");
             System.out.println("2. Exit");
             int choice = Input.getInt("Select an option: ");
             Utility.clearScreen();
-
             if (choice == 1) {
                 Utility.animatedPrint("Hello, World!\n", 30);
                 Utility.pressToContinue();
@@ -157,21 +165,26 @@ public class MenuExample {
 }
 ```
 
-## Contributing
+## DEBUGGING
+For issues, check console output for errors related to input validation or console operations. Test with a simple program:
+```
+java Main
+```
+Report issues via [GitHub Issues](https://github.com/dreyyan/Project.26.Systemate/issues) or contact ADT07299270@gmail.com.
 
-Contributions are welcome! To contribute:
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature`).
-3. Commit your changes (`git commit -m "Add your feature"`).
-4. Push to the branch (`git push origin feature/your-feature`).
-5. Open a pull request.
+## PROJECT STRUCTURE
+- `src/main/java/com/dreyyan/systemate/`: Core library code with `Input` and `Utility` classes.
+- `pom.xml`: Maven configuration for building the project.
+- Other files include standard Maven/Gradle setup and documentation.
 
-Please ensure your code follows the project's coding standards and includes tests.
+## CONTRIBUTING
+Contributions are welcome! Fork the repo, make changes, and submit a pull request:
+1. Create a feature branch: `git checkout -b feature/new-feature`
+2. Commit changes: `git commit -m "Add new feature"`
+3. Push: `git push origin feature/new-feature`
+4. Open a pull request
 
-## License
+Ensure code follows project standards and includes tests. Report issues or suggest features via [GitHub Issues](https://github.com/dreyyan/Project.26.Systemate/issues).
 
-Systemate is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For questions or feedback, reach out via [GitHub Issues](https://github.com/dreyyan/Project.26.Systemate/issues) or email at ADT07299270@gmail.com.
+## LICENSE
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
